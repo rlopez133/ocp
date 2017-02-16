@@ -6,7 +6,7 @@ for HOSTNUM in 0 ; do
   openstack server create --flavor m1.medium --image master-infra-app-nodes-2017-02-16-snap --key-name rlopez \
   --nic net-id=$netid1,v4-fixed-ip="172.18.10.15" \
   --nic net-id=$netid2,v4-fixed-ip="172.18.20.16" \
-  --user-data=user-data/master-${HOSTNUM}.yaml \
+  --security-group master-sg --user-data=user-data/master-${HOSTNUM}.yaml \
   master-${HOSTNUM}.${DOMAIN}
 done
 
@@ -14,7 +14,7 @@ for HOSTNUM in 1 ; do
   openstack server create --flavor m1.medium --image master-infra-app-nodes-2017-02-16-snap --key-name rlopez \
   --nic net-id=$netid1,v4-fixed-ip="172.18.10.17" \
   --nic net-id=$netid2,v4-fixed-ip="172.18.20.20" \
-  --user-data=user-data/master-${HOSTNUM}.yaml \
+  --security-group master-sg --user-data=user-data/master-${HOSTNUM}.yaml \
   master-${HOSTNUM}.${DOMAIN}
 done
 
@@ -22,7 +22,7 @@ for HOSTNUM in 2 ; do
   openstack server create --flavor m1.medium --image master-infra-app-nodes-2017-02-16-snap --key-name rlopez \
   --nic net-id=$netid1,v4-fixed-ip="172.18.10.13" \
   --nic net-id=$netid2,v4-fixed-ip="172.18.20.6" \
-  --user-data=user-data/master-${HOSTNUM}.yaml \
+  --security-group master-sg --user-data=user-data/master-${HOSTNUM}.yaml \
   master-${HOSTNUM}.${DOMAIN}
 done
 
