@@ -1,9 +1,10 @@
 #!/bin/sh
-DOMAIN=${DOMAIN:-control.ocp3.e2e.bos.redhat.com}
+DOMAIN=${DOMAIN:-control.osp10.e2e.bos.redhat.com}
 BASTION="bastion-rl"
 MASTERS="master-0 master-1 master-2"
 INFRA_NODES="infra-node-0 infra-node-1"
 APP_NODES="app-node-0 app-node-1 app-node-2"
+#APP_NODES="app-node-0"
 ALL_NODES="$INFRA_NODES $APP_NODES"
 ALL_HOSTS="$BASTION $MASTERS $ALL_NODES"
 function tenant_ip() {
