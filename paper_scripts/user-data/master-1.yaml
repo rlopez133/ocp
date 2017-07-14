@@ -8,7 +8,7 @@ Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment; filename="master-1.yaml"
 #cloud-config
 hostname: master-1
-fqdn: master-1.control.osp10.e2e.bos.redhat.com
+fqdn: master-1.ocp3.aitlabs.com
 --===============6355019966770068462==
 MIME-Version: 1.0
 Content-Type: text/x-shellscript; charset="us-ascii"

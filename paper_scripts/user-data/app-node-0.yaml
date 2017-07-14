@@ -8,7 +8,7 @@ Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment; filename="app-node-0.yaml"
 #cloud-config
 hostname: app-node-0
-fqdn: app-node-0.control.osp10.e2e.bos.redhat.com
+fqdn: app-node-0.ocp3.aitlabs.com
 --===============6355019966770068462==
 MIME-Version: 1.0
 Content-Type: text/x-shellscript; charset="us-ascii"

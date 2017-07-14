@@ -1,6 +1,6 @@
 #!/bin/sh
-DOMAIN=${DOMAIN:-control.osp10.e2e.bos.redhat.com}
-BASTION="bastion-rl"
+DOMAIN=${DOMAIN:-ocp3.aitlabs.com}
+BASTION="bastion"
 MASTERS="master-0 master-1 master-2"
 INFRA_NODES="infra-node-0 infra-node-1"
 APP_NODES="app-node-0 app-node-1 app-node-2"

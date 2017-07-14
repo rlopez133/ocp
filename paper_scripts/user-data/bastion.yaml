@@ -7,8 +7,8 @@ Content-Type: text/cloud-config; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment; filename="bastion.yaml"
 #cloud-config
-hostname: bastion-rl
-fqdn: bastion-rl.control.osp10.e2e.bos.redhat.com
+hostname: bastion
+fqdn: bastion.ocp3.aitlabs.com
 --===============6355019966770068462==
 MIME-Version: 1.0
 Content-Type: text/x-shellscript; charset="us-ascii"

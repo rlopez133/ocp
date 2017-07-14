@@ -1,10 +1,10 @@
 #!/bin/sh
-DOMAIN=${DOMAIN:-control.osp10.e2e.bos.redhat.com}
-netid1=$(openstack network list | awk "/control-network/ { print \$2 }")
-netid2=$(openstack network list | awk "/tenant-network/ { print \$2 }")
-openstack server create --flavor m1.small --image rhel7 \
---key-name ocp3kp \
---nic net-id=$netid1,v4-fixed-ip="172.18.10.7" \
---nic net-id=$netid2,v4-fixed-ip="172.18.20.10" \
+DOMAIN=${DOMAIN:-ocp3.aitlabs.com}
+netid0=$(openstack network list | awk "/public_network/ { print \$2 }")
+netid1=$(openstack network list | awk "/tenant-network/ { print \$2 }")
+openstack server create --flavor m1.medium --image rhel7 \
+--key-name openshiftkp \
+--nic net-id=$netid0 \
+--nic net-id=$netid1,v4-fixed-ip="172.18.20.13" \
 --security-group bastion-sg --user-data=user-data/bastion.yaml \
-bastion-rl.${DOMAIN}
+bastion.${DOMAIN}
